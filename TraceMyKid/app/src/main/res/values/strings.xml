@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Trace My Kid</string>
+    //welcome screen
+    <string name="text_app_name">Trace My Kid</string>
+    <string name="text_app_slogan">Beyond Boundaries, Within Your Reach</string>
+    <string name="text_app_version">Version 1.0</string>
+    <string name="checkbox_disable_welcome">Skip Welcome Screen Next Time</string>
+    //menu item
+    <string name="about">About</string>
+    <string name="about_message">Version 1.0\nDeveloper Team: Runtime Terror"</string>
+    <string name="about_title">Trace My Kid</string>
+    //add activity fragment
+    <string name="text_add_title">Add New Activity</string>
+    <string name="inputtext_activity_name">Activity Name</string>
+    <string name="spinner_category">Activity Category</string>
+    <string-array name="category">
+        <item name="In">Activity Category</item>
+        <item name="In">Indoor</item>
+        <item name="Out">Outdoor</item>
+        <item name="Phy">Physical</item>
+        <item name="Over">Overnight</item>
+        <item name="Edu">Educational</item>
+        <item name="Oth">Other</item>
+    </string-array>
+    <string name="switch_location">Include Location</string>
+    <string name="text_location">Current Location</string>
+    // Location
+    <string name="address_text">"Address: %1$s \n Timestamp: %2$tr"</string>
+    <string name="no_location">No location available</string>
+    <string name="no_address_found">No address found</string>
+    <string name="loading">Loading…</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid coordinates used</string>
+    <string name="start_tracking_location">Start tracking location</string>
+    <string name="stop_tracking_location">Stop tracking location</string>
+    <string name="location_text">"Latitude: %1$.4f \n Longitude: %2$.4f \n Timestamp: %3$tr"</string>
+    <string name="location_permission_denied">Location permissions denied, please enable the permissions to use this app.</string>
+    // Date and Time
+    <string name="text_date">Date</string>
+    <string name="text_time">Time</string>
+    <string name="button_date">Select Date</string>
+    <string name="button_time">Select Time</string>
+    // Photo
+    <string name="button_add_photo">Add Photo</string>
+    // Camera
+    <string name="camera">Start Camera</string>
+    <string name="photo">Take Photo</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    // Notes
+    <string name="inputtext_notes">Notes</string>
+    // Reporter
+    <string name="inputtext_reporter_name">Reporter Name</string>
+    // Submit
+    <string name="button_submit">Submit</string>
+    // Error Message
+    <string name="activity_name_error">The activity name must not be empty and only contain alphabet character.</string>
+    <string name="category_error">Activity category must be selected.</string>
+    <string name="date_and_time_error">Please fill in required field.</string>
+    <string name="date_and_time_error2">Please fill in required field, including Activity Category.</string>
+    <string name="reporter_name_error">TThe reporter name must not be empty and only contain alphabet character.</string>
+    //details fragment
+    <string name="text_details_title">Confirm Activity Details</string>
+    <string name="text_name_title">Activity Name</string>
+    <string name="text_category_title">Activity Category</string>
+    <string name="text_date_and_time_title">Date and Time</string>
+    <string name="text_location_title">Location</string>
+    <string name="text_photo_title">Photo</string>
+    <string name="text_notes_title">Notes</string>
+    <string name="text_reporter_name_title">Reporter Name</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="button_cancel">Cancel</string>
+    //search activity fragment
+    <string name="text_search_title">Search Activity</string>
+    //activity fragment
+    <string name="text_activity_info_title">Activity Information</string>
+    <string name="button_ok">Ok</string>
+    <string name="button_Cancel">Cancel</string>
+    <string name="button_back">Back</string>
+    <string name="button_Edit">Edit</string>
+    <string name="button_delete">Delete</string>
+    //setting fragment
+    <string name="text_setting_title">Settings</string>
+    <string name="text_enable_welcome_title">Enable Welcome Screen</string>
+    <string name="text_enable_welcome_subtitle">Use to enable or disable the welcome screen everytime open the app.</string>
+    <string name="text_clear_title">Clear All Application Data</string>
+    <string name="text_clear_subtitle">All data will be wiped off and the action cannot be undo.</string>
+    <string name="button_clear_all">Clear All</string>
+    <string name="delete">All data has been cleared.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

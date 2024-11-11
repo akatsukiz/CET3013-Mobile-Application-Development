@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Simple Discount Calculator App</string>
+
+    //discount types select
+    <string name="text_header">Select Discount Type</string>
+    <string name="radio_percentOff">Percent Off</string>
+    <string name="radio_fixed_amount">Fixed Amount</string>
+    //user input
+    <string name="text_sales_price">Enter Price</string>
+    <string name="text_discount">Enter Discount</string>
+    <string name="text_sales_price_symbol">$</string>
+    <string name="text_discount_symbol">%</string>
+    <string name="text_tax_symbol">%</string>
+    <string name="switch_tax">With Tax</string>
+    <string name="text_tax">Enter Tax</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="button_minus_ten">-10</string>
+    <string name="button_minus_five">-5</string>
+    <string name="button_minus_one">-1</string>
+    <string name="button_plus_one">+1</string>
+    <string name="button_plus_five">+5</string>
+    <string name="button_plus_ten">+10</string>
+    //user input validation
+    <string name="sales_price_error1">The Sales Price should not be blank.</string>
+    <string name="sales_price_error2">The Sales Price should greater than 0.</string>
+    <string name="fixed_amount_error1">The Discount Amount should not be blank.</string>
+    <string name="fixed_amount_error2">The Discount Amount should be greater than 0.</string>
+    <string name="fixed_amount_error3">The Discount Amount should not be greater than the Sales Price.</string>
+    <string name="percent_off_error1">The Discount Percentage should not be blank.</string>
+    <string name="percent_off_error2">The Discount Percentage should be greater than 0.</string>
+    <string name="tax_error1">The Tax Rate should not be blank.</string>
+    <string name="tax_error2">The Tax Rate should be greater than 0.</string>
+    //output
+    <string name="text_save_label">Your Save:</string>
+    <string name="text_save_amount">0.00 $</string>
+    <string name="text_tax_label">Tax:</string>
+    <string name="text_tax_amount">0.00 $</string>
+    <string name="text_total_label">Total Price:</string>
+    <string name="text_total_amount">0.00 $</string>
+    //menu item
+    <string name="menu_clear">Clear All</string>
+    <string name="about">About</string>
+    <string name="about_message">Version 1.0\nProgrammer: Seow Fen</string>
+    <string name="about_title">Simple Discount Calculator App</string>
+</resources>

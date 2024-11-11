@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Week 11 CET3013 CameraX</string>
+
+    <string name="camera">Start Camera</string>
+    <string name="photo">Take Photo</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+
+</resources>

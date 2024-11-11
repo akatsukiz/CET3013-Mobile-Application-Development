@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Week 3 CET3013</string>
+
+    <string name="hint">Enter your name</string>
+    <string name="start">Start Quiz</string>
+    <string name="question">Pacific ocean is bigger than Atlantic Ocean?</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="correct">Your answer is correct!</string>
+    <string name="incorrect">Your answer is incorrect!</string>
+    <string name="sample_answer">The result will show at here</string>
+    <string name="header">please answer the following question</string>
+
+</resources>

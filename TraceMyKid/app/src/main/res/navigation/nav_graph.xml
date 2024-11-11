@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addActivityFragment">
+
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="com.example.tracemykid.AddActivityFragment"
+        android:label="fragment_add_activity"
+        tools:layout="@layout/fragment_add_activity" >
+        <action
+            android:id="@+id/action_addActivityFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_addActivityFragment_to_searchActivityFragment"
+            app:destination="@id/searchActivityFragment" />
+        <action
+            android:id="@+id/action_addActivityFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.tracemykid.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+        <argument android:name="activity_name"
+            app:argType="string" />
+        <argument
+            android:name="activity_category"
+            app:argType="string" />
+        <argument
+            android:name="date_and_time"
+            app:argType="string" />
+        <argument
+            android:name="location"
+            app:argType="string" />
+        <argument
+            android:name="photo"
+            app:argType="string" />
+        <argument
+            android:name="notes"
+            app:argType="string" />
+        <argument
+            android:name="reporter_name"
+            app:argType="string" />
+        <argument
+            android:name="gotImage"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchActivityFragment"
+        android:name="com.example.tracemykid.SearchActivityFragment"
+        android:label="fragment_search_activity"
+        tools:layout="@layout/fragment_search_activity" >
+        <action
+            android:id="@+id/action_searchActivityFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_searchActivityFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+        <action
+            android:id="@+id/action_searchActivityFragment_to_fragmentActivity"
+            app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.tracemykid.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_searchActivityFragment"
+            app:destination="@id/searchActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentActivity"
+        android:name="com.example.tracemykid.FragmentActivity"
+        android:label="FragmentActivity" >
+        <action
+            android:id="@+id/action_fragmentActivity_to_searchActivityFragment"
+            app:destination="@id/searchActivityFragment" />
+        <argument
+            android:name="activity_name"
+            app:argType="string" />
+        <argument
+            android:name="activity_category"
+            app:argType="string" />
+        <argument android:name="date_and_time"
+            app:argType="string" />
+        <argument android:name="photo"
+            app:argType="string" />
+        <argument android:name="notes"
+            app:argType="string" />
+        <argument android:name="reporter_name"
+            app:argType="string" />
+        <argument
+            android:name="gotImage"
+            app:argType="boolean" />
+        <argument
+            android:name="location"
+            app:argType="string" />
+        <argument android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

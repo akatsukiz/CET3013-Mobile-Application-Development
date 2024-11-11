@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Week 4 CET3013 Discount</string>
+
+    <string name="header">Get a free discount code by TODAY!</string>
+    <string name="discount_button">Get Discount</string>
+    <string name="discount_code">Hey, %1$s! Here is your discount code</string>
+    <string name="error_message">Please fill in all form fields</string>
+    <string name="hint1">Enter User Name</string>
+    <string name="hint2">Enter Email Address</string>
+    <string name="menu_clear">Clear All</string>
+    <string name="about">About</string>
+    <string name="about_message">Simple Discount Application Version 1.0</string>
+    <string name="prompt">Select Region</string>
+
+    <string-array name="region">
+        <item name="mal">Malaysia</item>
+        <item name="sin">Singapore</item>
+        <item name="chn">China</item>
+        <item name="oth">Others</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Simple Discount Calculator App"
+            android:textColor="@color/brown"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="22dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/group_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_header">
+
+        <RadioButton
+            android:id="@+id/radio_percent_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_percentOff"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:theme="@style/RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radio_fixed_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/RadioButton"
+            android:text="@string/radio_fixed_amount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/text_sales_price"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/text_sales_price"
+        android:inputType="numberDecimal"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/light_brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_mode" />
+
+    <EditText
+        android:id="@+id/text_discount"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/text_discount"
+        android:inputType="number"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/light_brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_sales_price" />
+
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/text_header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/brown"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/group_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_sales_price_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:text="@string/text_sales_price_symbol"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/text_sales_price"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="@+id/text_sales_price"
+        app:layout_constraintTop_toTopOf="@+id/text_sales_price" />
+
+    <TextView
+        android:id="@+id/text_discount_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:text="@string/text_discount_symbol"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/text_discount"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="@+id/text_discount"
+        app:layout_constraintTop_toTopOf="@+id/text_discount" />
+
+    <SeekBar
+        android:id="@+id/slider_discount_percent"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:indeterminate="false"
+        android:theme="@style/Slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <SeekBar
+        android:id="@+id/slider_tax_percent"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:theme="@style/Slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_tax" />
+
+    <EditText
+        android:id="@+id/text_tax"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/text_tax"
+        android:inputType="number"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/light_brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_tax"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:showText="false"
+        android:splitTrack="false"
+        android:text="@string/switch_tax"
+        android:textColor="@color/brown"
+        android:theme="@style/Switch"
+        app:layout_constraintEnd_toStartOf="@+id/text_tax"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/text_tax_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:text="@string/text_tax_symbol"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/text_tax"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="@+id/text_tax"
+        app:layout_constraintTop_toTopOf="@+id/text_tax" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:text="@string/button_calculate"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:theme="@style/CalculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_tax_percent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_calculate">
+        <!--Discount Information Table-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_calculate">
+
+            <!-- Save amount-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_pink"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_save_label"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/text_save_label"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/text_save_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/text_save_amount"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/brown" />
+            </LinearLayout>
+
+            <!-- Tax amount -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_pink"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_tax_label"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/text_tax_label"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/text_tax_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/text_tax_amount"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/brown" />
+
+            </LinearLayout>
+
+            <!-- Tax amount -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_total_label"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/text_total_label"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/brown"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_total_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/text_total_amount"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/brown"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/buttonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/button_minus_ten"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="-10dp"
+            android:insetTop="4dp"
+            android:insetRight="-10dp"
+            android:insetBottom="4dp"
+            android:minWidth="48dp"
+            android:text="@string/button_minus_ten"
+            android:textAllCaps="false"
+            android:textColor="@color/brown"
+            android:textSize="14sp"
+            app:backgroundTint="@color/pink" />
+
+        <Button
+            android:id="@+id/button_minus_five"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:insetLeft="-10dp"
+            android:insetRight="-10dp"
+            android:text="@string/button_minus_five"
+            android:textColor="@color/brown"
+            android:textSize="14sp"
+            app:backgroundTint="@color/pink" />
+
+        <Button
+            android:id="@+id/button_minus_one"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:insetLeft="-10dp"
+            android:insetRight="-10dp"
+            android:text="@string/button_minus_one"
+            android:textColor="@color/brown"
+            android:textSize="14sp"
+            app:backgroundTint="@color/pink" />
+
+        <Button
+            android:id="@+id/button_plus_one"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:insetLeft="-10dp"
+            android:insetRight="-10dp"
+            android:text="@string/button_plus_one"
+            android:textColor="@color/brown"
+            android:textSize="14sp"
+            app:backgroundTint="@color/pink" />
+
+        <Button
+            android:id="@+id/button_plus_five"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:insetLeft="-10dp"
+            android:insetRight="-10dp"
+            android:text="@string/button_plus_five"
+            android:textColor="@color/brown"
+            android:textSize="14sp"
+            app:backgroundTint="@color/pink" />
+
+        <Button
+            android:id="@+id/button_plus_ten"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="-10dp"
+            android:insetRight="-10dp"
+            android:text="@string/button_plus_ten"
+            android:textColor="@color/brown"
+            android:textSize="14sp"
+            app:backgroundTint="@color/pink" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="282dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="337dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

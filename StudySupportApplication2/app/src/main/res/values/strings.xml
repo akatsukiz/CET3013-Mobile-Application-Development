@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Study Support Application</string>
+    <string name="tab_text_1">Schedule</string>
+    <string name="tab_text_2">Note</string>
+
+    <string name="string_SchedulePlanner">Schedule</string>
+    <string name="string_note">Note</string>
+
+    <string name="subjectListText">Subject List</string>
+    <string name="courseListText">Course List</string>
+    <string name="subjectText">Subject Title</string>
+    <string name="courseText">Course Name</string>
+    <string name="chapterText">Chapter Number</string>
+    <string name="noteTitleText">Note Title</string>
+    <string name="noteContentText">Note Content</string>
+    <string name="homeText">Home</string>
+
+    <string name="eventText">Event</string>
+    <string name="venueText">Venue</string>
+    <string name="startDateText"><u>Start Date</u></string>
+    <string name="startTimeText"><u>Start Time</u></string>
+    <string name="endDateText"><u>End Date</u></string>
+    <string name="endTimeText"><u>End Time</u></string>
+    <string name="repeatText">Repeatable</string>
+
+    <string name="searchText">Search notes</string>
+
+    <string name="submitText">Submit</string>
+
+    <string name="splashText">Welcome to Study Support Application</string>
+</resources>

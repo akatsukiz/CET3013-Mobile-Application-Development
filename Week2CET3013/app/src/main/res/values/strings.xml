@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Week 2 CET3013</string>
+
+    <string name="instruction">Hello, please enter your username and password</string>
+    <string name="hint1">User Name</string>
+    <string name="hint2">Password</string>
+    <string name="Login">Login</string>
+</resources>

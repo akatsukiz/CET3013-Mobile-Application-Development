@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:icon="@drawable/baseline_playlist_add_24"
+        android:title="Add Activity" />
+    <item
+        android:id="@+id/menu_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:icon="@drawable/baseline_manage_search_24"
+        android:title="Search Activity" />
+    <item
+        android:id="@+id/menu_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Settings" />
+</menu>

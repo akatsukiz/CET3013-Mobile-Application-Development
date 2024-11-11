@@ -1,0 +1,16 @@
+Index: app/src/main/java/com/example/tracemykid/AddActivityFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/tracemykid/AddActivityFragment.kt b/app/src/main/java/com/example/tracemykid/AddActivityFragment.kt
+--- a/app/src/main/java/com/example/tracemykid/AddActivityFragment.kt	
++++ b/app/src/main/java/com/example/tracemykid/AddActivityFragment.kt	(date 1701654898391)
+@@ -216,7 +216,6 @@
+             val intent = Intent(requireContext(), CameraActivity::class.java)
+             startForResult!!.launch(intent)
+         }
+-
+         var validActivityName = false
+         var validCategory = false
+         var validDate = false

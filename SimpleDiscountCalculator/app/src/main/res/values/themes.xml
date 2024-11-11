@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SimpleDiscountCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/pink</item>
+    </style>
+
+    <style name="Theme.SimpleDiscountCalculator" parent="Base.Theme.SimpleDiscountCalculator" />
+
+    <style name="ToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brown</item>
+    </style>
+
+    <style name="RadioButton" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/brown</item>
+        <item name="colorControlNormal">@color/brown_grey</item>
+        <item name="colorControlActivated">@color/brown</item>
+    </style>
+
+    <style name="Slider" parent="Theme.AppCompat.Light">
+        <!-- progress background color -->
+        <item name="android:progressBackgroundTint">@color/brown_grey</item>
+        <!-- thumb color -->
+        <item name="android:thumbTint">@color/brown</item>
+        <!-- progress foreground color -->
+        <item name="android:progressTint">@color/brown</item>
+    </style>
+
+    <style name="Switch" parent="Theme.AppCompat.Light">
+        <!-- active thumb and track color  -->
+        <item name="colorControlActivated">@color/pink</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/pink</item>
+        <!-- inactive track color -->
+        <item name="android:colorForeground">@color/brown</item>
+    </style>
+
+    <style name="CalculateButton" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorButtonNormal">@color/light_grey</item>
+        <item name="colorControlHighlight">@color/light_pink</item>
+        <item name="android:buttonCornerRadius">15dp</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+    </style>
+
+</resources>
